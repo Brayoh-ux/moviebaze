@@ -61,3 +61,24 @@ def search(request):
 
     return render(request, 'search.html', context)
 
+
+def genres(request):
+
+
+
+    url = "https://data-imdb1.p.rapidapi.com/genres/"
+
+    headers = {
+        'x-rapidapi-key': "9652cc0a79msh4af94eb1191c581p1cbf32jsnca2fa1efd9a3",
+        'x-rapidapi-host': "data-imdb1.p.rapidapi.com"
+        }
+
+    response = requests.request("GET", url, headers=headers).json()
+
+    genres = {
+        'title' : response['Genres'][0]['genre']
+    }
+
+    context = {'genres' : genres}
+
+    return render(request, 'index.html', context)

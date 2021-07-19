@@ -5,6 +5,16 @@
 
 <div class="container-fluid">
 
+ <ul>
+     
+     {% if genres %}
+     <li>{{genres.title}}</li>
+         
+     {% endif %}
+         
+         
+ </ul>
+
     {% if movie %}
 
     <div class="card mr-auto p-2" style="width: 18rem;">
