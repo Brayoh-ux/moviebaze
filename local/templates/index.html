@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% block  content %}
+
+<div class="container-fluid">
+
+    {% if movie %}
+
+    <div class="card mr-auto p-2" style="width: 18rem;">
+        <img src=" {{movie.image}} " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">
+               <i><b>Movie Name : </b></i> {{movie.name}}
+          </p>
+          <p class="card-text">
+            <i>Starring : </i>{{movie.staring}}
+        </p>
+        </div>
+      </div>
+
+
+      <div class="card mr-auto p-2" style="width: 18rem;">
+        <img src=" {{movie.image}} " class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">
+               <i><b>Movie Name : </b></i> {{movie.name}}
+          </p>
+          <p class="card-text">
+            <i>Starring : </i>{{movie.staring}}
+        </p>
+        </div>
+      </div>
+
+      
+        
+        
+    {% endif %}
+
+
+    
+        
+</div>
+    
+{% endblock content %}
+    
